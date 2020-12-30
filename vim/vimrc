@@ -1,6 +1,8 @@
 syntax on
 filetype indent plugin on
 
+set backspace=indent,eol,start
+
 set tabstop=4
 set expandtab
 set shiftwidth=4
@@ -37,5 +39,6 @@ call plug#begin('~/.vim/plugged') "load vim-plug
 call plug#end()
 
 let g:airline_theme='badwolf'
+hi Search term=reverse ctermbg=Green ctermfg=White guibg=Yellow
 
 autocmd BufWritePre *.py execute ':Black'
