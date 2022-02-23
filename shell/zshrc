@@ -86,3 +86,6 @@ source $ZSH/oh-my-zsh.sh
 alias rm='rm -i'
 
 export TERM=xterm-255color
+
+# functions
+function jwt-decode() { jq -R 'split(".") | select(length > 0) | .[0],.[1] | @base64d | fromjson' <<< $1 }
